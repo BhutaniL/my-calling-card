@@ -32,8 +32,8 @@ export function Hero() {
           <p className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-4 py-2 text-sm text-primary-foreground/90">
             <GraduationCap className="size-4 shrink-0" aria-hidden="true" />
             <span>
-              Just finished a Master of Science in Project Management, Northeastern University,
-              Seattle
+              Master of Science in Project Management, Northeastern University, Seattle (GPA - 3.8,
+              June 2026)
             </span>
           </p>
         </div>
