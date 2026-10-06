@@ -3,7 +3,23 @@ import { ArrowUpRight, Mail } from 'lucide-react'
 const EMAIL = 'Lbhutaninew@gmail.com'
 const LINKEDIN_PATH = 'linkedin.com/in/laxmibhutani'
 
-const focusAreas = ['Logistics', 'Fintech', 'SaaS']
+const experience = [
+  {
+    title: 'Product Leadership',
+    description:
+      '8+ years leading zero-to-one product launches, experimentation, and scaling solutions across fintech, SaaS, and logistics.',
+  },
+  {
+    title: 'Stakeholder & Agile Delivery',
+    description:
+      'Partnering cross-functionally with engineering, design, legal, and business teams to drive alignment and execution.',
+  },
+  {
+    title: 'Data-Driven Insights',
+    description:
+      'Leveraging customer feedback and operational data to identify opportunities and scale customer-centric outcomes.',
+  },
+]
 
 export function CallingCard() {
   return (
@@ -25,17 +41,28 @@ export function CallingCard() {
           <p className="leading-relaxed text-pretty text-card-foreground">
             Just finished a{' '}
             <span className="font-semibold">Master of Science in Project Management</span> at
-            Northeastern University, Seattle, with{' '}
-            <span className="font-semibold">8+ years of experience</span> in product, strategy,
-            and business analysis.
+            Northeastern University, Seattle.
           </p>
-          <ul className="flex flex-wrap gap-2" aria-label="Industries">
-            {focusAreas.map((area) => (
-              <li
-                key={area}
-                className="rounded-full border border-primary/20 bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground"
-              >
-                {area}
+        </section>
+
+        <section aria-labelledby="experience-heading" className="flex flex-col gap-4">
+          <h2
+            id="experience-heading"
+            className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground"
+          >
+            Experience
+          </h2>
+          <ul className="flex flex-col gap-3">
+            {experience.map((item) => (
+              <li key={item.title} className="flex gap-3 leading-relaxed text-card-foreground">
+                <span
+                  className="mt-2.5 size-1.5 shrink-0 rounded-full bg-primary"
+                  aria-hidden="true"
+                />
+                <p className="text-pretty">
+                  <span className="font-semibold text-primary">{item.title}:</span>{' '}
+                  {item.description}
+                </p>
               </li>
             ))}
           </ul>
